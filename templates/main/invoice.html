@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Sales Invoice</h1>
+   
+        <table style="border: solid black 1px;">
+            <tr>
+                <td colspan="4" style="padding:5px; font-size:large;"> <span style="margin-top:10px;"> Invoice Number : {{invoice_no}} </span> </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding:5px; font-size:large;">Invoice Date : {{ invoice_date }} </td>
+            </tr>
+            <tr style="background-color: rgb(47, 245, 245);">
+                <td colspan="2" style="padding:5px; font-weight:bold; font-size:large;"> Seller</td>
+                <td colspan="2" style="padding:5px; font-weight:bold; font-size:large;"> Buyer</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding:5px; font-size:large;"> Name : {{seller_name}} </td>
+                <td colspan="2" style="padding:5px; font-size:large;"> Name : {{buyer_name}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding:5px; font-size:large;"> Address : {{seller_address}} </td>
+                <td colspan="2" style="padding:5px; font-size:large;"> Address : {{buyer_address}} </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding:5px; font-size:large;"> Phonne Number : {{seller_phone_no}}</td>
+                <td colspan="2" style="padding:5px; font-size:large;"> Phone Number : {{seller_phone_no}}</td>
+            </tr>
+            <tr style="background-color: rgb(47, 245, 245);">
+                <td style="padding:5px; font-weight:bold; font-size:large; text-align:center;">Sno.</td>
+                <td style="padding:5px; font-weight:bold; font-size:large; text-align:center;">Product</td>
+                <td style="padding:5px; font-weight:bold; font-size:large; text-align:center;">Quantity</td>
+                <td style="padding:5px; font-weight:bold; font-size:large; text-align:center;">Amount</td>
+            </tr>
+            
+                {{table_data|safe}}
+            
+            <tr>
+                <td colspan="3" style="padding:5px; font-weight:bold; font-size:large; text-align:center">Grand Total</td>
+                <td style="padding:5px; font-weight:bold; font-size:large; text-align:center">{{grand_total}}</td>
+            </tr>
+        </table>
+</body>
+</html>
