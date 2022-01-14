@@ -1,10 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-import io
-from django.http import FileResponse, HttpResponse
-from reportlab.pdfgen import canvas
-from reportlab.lib.units import inch
-from reportlab.lib.pagesizes import letter
+from django.http import HttpResponse
 import random
 from datetime import date
 
